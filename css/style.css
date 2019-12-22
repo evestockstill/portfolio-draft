@@ -23,13 +23,13 @@ body {
   height: 95vh;
   background-image:linear-gradient(
     to right bottom,
-hsla(197, 100%, 13%, 0.69), 
- hsla(197, 100%, 11%, 0.87)), 
+  rgba(126, 213, 111, 0.8), 
+  rgba(22, 114, 82, 0.8)), 
   url(./img/coding.jpeg);
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
 }
 .logo-box {
   position: absolute;
@@ -38,7 +38,7 @@ hsla(197, 100%, 13%, 0.69),
 
 }
 .logo {
-  background-color:hsla(197, 100%, 6%, 0.92);
+  background-color: rgb(6, 90, 51);
   height: 65px;
   width: 65px;
 }
@@ -46,33 +46,31 @@ hsla(197, 100%, 13%, 0.69),
   position: absolute;
   top: 40%;
   left: 50%;
-  color: hsla(197, 100%, 77%, 0.73);
+  color: #fff;
   transform: translate(-20%, -20%);
   font-size: 30px;
  font-weight: 700;
+}
+.last {
+  color: rgb(6, 90, 51);
 }
 .text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+   text-align: center;
 }
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
+    margin-bottom: 40px;
 }
-.heading-primary-main {
-display: block;
-font-size: 60px;
-font-weight: 400;
-letter-spacing: 25px;
-left: 20%;
-animation: moveDown 1s ease-out;
-}
+
 .heading-primary-sub-main {
 display: block;
-font-size: 60px;
+font-size: 40px;
 font-weight: 400;
 letter-spacing: 25px;
 animation: moveInLeft 1s ease-out;
@@ -87,11 +85,26 @@ animation: moveInRight 1s ease-in;
 @keyframes moveInLeft {
   0% {
       opacity: 0;
+      color: rgb(6, 90, 51);
       transform: translateX(-100px);
   }
   80% {
     opacity: .5;
-    color:hsla(197, 100%, 11%, 0.87);
+    color: rgb(6, 90, 51);
+      transform: translateX(12px);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+@keyframes moveInLeftFirst {
+  0% {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+  80% {
+    opacity: .5;
       transform: translateX(12px);
   }
   100% {
@@ -106,7 +119,7 @@ animation: moveInRight 1s ease-in;
   }
   40% {
     opacity: .2;
-    color: rgba(23, 63, 94, 0.8);
+    
   }
   80% {
     opacity: .5;
@@ -117,22 +130,24 @@ animation: moveInRight 1s ease-in;
       transform: translate(0);
   }
 }
-@keyframes moveDown {
-  0% {
-      opacity: 0;
-      transform: translateY(-100px);
-  }
-  40% {
-    opacity: .3;
-    
-  }
-  80% {
-    opacity: .5;
-    
-      transform: translateY(12px);
-  }
-  100% {
-      opacity: 1;
-      transform: translate(0);
-  }
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.bnt:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
