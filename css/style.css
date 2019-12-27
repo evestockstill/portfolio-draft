@@ -180,7 +180,7 @@ animation: moveInRight 1s ease-in;
   z-index: -1;
   transition: all .4s;
 }
-.btn-white::after {
+.btn--white::after {
   background-color:#fff;
 }
 .btn:hover::after {
